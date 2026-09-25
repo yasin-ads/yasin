@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tamemi Digital | Google Ads, Maps & Digital Solutions</title>
+
+<meta name="description" content="Tamemi Digital provides Google Ads management, Google Maps solutions, Google Local Services Ads, Google Cloud solutions and professional website design.">
+
+<style>
+:root{
+    --blue:#0866ff;
+    --blue2:#0b73ff;
+    --dark:#071a38;
+    --text:#12213a;
+    --muted:#627087;
+    --light:#f5f9ff;
+    --border:#e3eaf4;
+    --green:#12a85a;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    height:78px;
+    background:rgba(255,255,255,.96);
+    border-bottom:1px solid #edf1f6;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-mark{
+    width:40px;
+    height:40px;
+    background:linear-gradient(135deg,#0875ff,#0050db);
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:23px;
+    font-weight:900;
+}
+
+.brand-text strong{
+    display:block;
+    font-size:20px;
+    color:#071a38;
+    line-height:1.05;
+}
+
+.brand-text small{
+    color:#69758a;
+    font-size:11px;
+}
+
+nav{
+    display:flex;
+    gap:32px;
+}
+
+nav a{
+    color:#263750;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--blue);
+}
+
+.quote-btn{
+    background:var(--blue);
+    color:#fff;
+    padding:11px 20px;
+    border-radius:25px;
+    font-weight:bold;
+    font-size:13px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    background:
+        radial-gradient(circle at 75% 30%,#e6f2ff 0,transparent 32%),
+        linear-gradient(135deg,#fff 30%,#f2f8ff 100%);
+    padding:90px 0 75px;
+    overflow:hidden;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    align-items:center;
+    gap:55px;
+}
+
+.eyebrow{
+    color:#56708f;
+    letter-spacing:3px;
+    font-weight:bold;
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:57px;
+    line-height:1.05;
+    letter-spacing:-2px;
+    color:#071a38;
+    max-width:650px;
+}
+
+.google-word span:nth-child(1){color:#4285F4;}
+.google-word span:nth-child(2){color:#EA4335;}
+.google-word span:nth-child(3){color:#FBBC05;}
+.google-word span:nth-child(4){color:#4285F4;}
+.google-word span:nth-child(5){color:#34A853;}
+.google-word span:nth-child(6){color:#EA4335;}
+
+.hero-description{
+    color:#53637a;
+    font-size:18px;
+    max-width:620px;
+    margin:25px 0 30px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.primary-btn{
+    background:var(--blue);
+    color:white;
+    padding:15px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.secondary-btn{
+    border:1px solid var(--blue);
+    color:var(--blue);
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
+    background:white;
+}
+
+.hero-benefits{
+    display:flex;
+    gap:25px;
+    margin-top:35px;
+    flex-wrap:wrap;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.hero-benefits span{
+    display:flex;
+    gap:7px;
+    align-items:center;
+}
+
+.blue-icon{
+    color:var(--blue);
+    font-size:19px;
+}
+
+/* ================= HERO VISUAL ================= */
+
+.visual{
+    position:relative;
+    min-height:440px;
+}
+
+.dashboard{
+    position:absolute;
+    width:88%;
+    right:0;
+    top:70px;
+    background:#fff;
+    border:1px solid #e4eaf2;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 30px 70px rgba(27,65,120,.15);
+}
+
+.dashboard-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:25px;
+}
+
+.dashboard-title{
+    font-weight:bold;
+}
+
+.dot-row span{
+    display:inline-block;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#ccd4df;
+    margin-left:4px;
+}
+
+.chart{
+    height:135px;
+    display:flex;
+    align-items:flex-end;
+    gap:10px;
+    border-bottom:1px solid #e7ebf0;
+    padding:0 8px 10px;
+}
+
+.bar{
+    flex:1;
+    background:linear-gradient(#3c91ff,#0866ff);
+    border-radius:5px 5px 0 0;
+}
+
+.bar:nth-child(1){height:30%;}
+.bar:nth-child(2){height:48%;}
+.bar:nth-child(3){height:42%;}
+.bar:nth-child(4){height:65%;}
+.bar:nth-child(5){height:58%;}
+.bar:nth-child(6){height:78%;}
+.bar:nth-child(7){height:72%;}
+.bar:nth-child(8){height:92%;}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.stat{
+    background:#f8fbff;
+    border:1px solid #edf2f7;
+    padding:12px;
+    border-radius:8px;
+}
+
+.stat small{
+    display:block;
+    color:#718096;
+}
+
+.stat strong{
+    font-size:20px;
+}
+
+.stat em{
+    display:block;
+    color:var(--green);
+    font-size:11px;
+    font-style:normal;
+}
+
+.float-card{
+    position:absolute;
+    background:white;
+    box-shadow:0 12px 35px rgba(20,55,100,.14);
+    border:1px solid #edf1f6;
+    border-radius:13px;
+    padding:14px 18px;
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+    z-index:4;
+}
+
+.float-card .icon{
+    display:block;
+    font-size:28px;
+    margin-bottom:4px;
+}
+
+.ads{
+    top:10px;
+    left:5%;
+}
+
+.maps{
+    top:5px;
+    right:8%;
+}
+
+.cloud{
+    right:-10px;
+    top:190px;
+}
+
+.local{
+    right:35px;
+    bottom:5px;
+}
+
+/* ================= TRUST ================= */
+
+.trust{
+    background:#fff;
+    border-top:1px solid #edf1f5;
+    border-bottom:1px solid #edf1f5;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.trust-item{
+    padding:25px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+    justify-content:center;
+}
+
+.trust-item + .trust-item{
+    border-left:1px solid #edf1f5;
+}
+
+.trust-symbol{
+    font-size:28px;
+}
+
+.trust-item strong{
+    display:block;
+    font-size:14px;
+}
+
+.trust-item small{
+    color:#718096;
+}
+
+/* ================= SERVICES ================= */
+
+.services-section{
+    padding:85px 0;
+    background:#f8fbff;
+}
+
+.section-head{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-head h2{
+    font-size:38px;
+    color:#071a38;
+}
+
+.section-head p{
+    color:#66758b;
+    margin-top:8px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.service-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:25px 20px;
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 40px rgba(35,73,125,.10);
+}
+
+.service-logo{
+    width:55px;
+    height:55px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f1f7ff;
+    font-size:29px;
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    font-size:18px;
+    margin-bottom:8px;
+    color:#0a1932;
+}
+
+.service-card > p{
+    color:#647187;
+    font-size:13px;
+    min-height:85px;
+}
+
+.service-card ul{
+    list-style:none;
+    margin:18px 0;
+}
+
+.service-card li{
+    font-size:12px;
+    color:#526178;
+    margin:8px 0;
+}
+
+.service-card li:before{
+    content:"✓";
+    color:var(--green);
+    font-weight:bold;
+    margin-right:7px;
+}
+
+.learn{
+    color:var(--blue);
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    padding:90px 0;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:380px;
+    border-radius:20px;
+    background:
+        linear-gradient(135deg,rgba(5,91,225,.93),rgba(8,35,78,.94));
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+    color:white;
+    text-align:center;
+}
+
+.about-image h3{
+    font-size:40px;
+    line-height:1.15;
+}
+
+.about-image span{
+    color:#72b2ff;
+}
+
+.about-content h2{
+    font-size:38px;
+    margin-bottom:18px;
+    color:#071a38;
+}
+
+.about-content > p{
+    color:#5f6c80;
+    font-size:16px;
+}
+
+.about-features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:30px;
+}
+
+.about-feature{
+    font-size:12px;
+}
+
+.about-feature strong{
+    display:block;
+    color:#13233d;
+    margin-bottom:4px;
+}
+
+.about-feature p{
+    color:#758197;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:70px 20px;
+    text-align:center;
+    background:linear-gradient(120deg,#0a315d,#061a34);
+    color:white;
+}
+
+.cta h2{
+    font-size:38px;
+}
+
+.cta p{
+    color:#d7e4f2;
+    margin:10px auto 25px;
+}
+
+.cta a{
+    display:inline-block;
+    background:var(--blue);
+    color:#fff;
+    padding:14px 30px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    padding:75px 0;
+}
+
+.contact h2{
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+.contact-subtitle{
+    color:#6c788a;
+    margin-bottom:35px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.contact-card{
+    padding:25px;
+    border:1px solid #e5eaf1;
+    border-radius:13px;
+    background:white;
+}
+
+.contact-card .contact-icon{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.contact-card strong{
+    display:block;
+    margin-bottom:3px;
+}
+
+.contact-card a,
+.contact-card p{
+    color:#57657a;
+    font-size:14px;
+}
+
+/* ================= OWNER ================= */
+
+.owner{
+    background:#f6f9fd;
+    padding:55px 0;
+}
+
+.owner-box{
+    background:white;
+    border:1px solid #e3e9f1;
+    border-radius:16px;
+    padding:35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.owner h3{
+    font-size:25px;
+}
+
+.owner p{
+    color:#68758a;
+}
+
+.owner-data{
+    text-align:right;
+}
+
+.owner-data strong{
+    display:block;
+    color:#0c1c36;
+}
+
+.owner-data span{
+    color:#66758b;
+    font-size:13px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid #e7ebf1;
+    padding:35px 0;
+    color:#7a8597;
+    font-size:13px;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    align-items:center;
+}
+
+.footer-brand{
+    font-weight:bold;
+    color:#17253d;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1050px){
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-grid,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .visual{
+        max-width:650px;
+        width:100%;
+        margin:auto;
+    }
+}
+
+@media(max-width:750px){
+
+    header{
+        height:68px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .quote-btn{
+        padding:9px 13px;
+        font-size:11px;
+    }
+
+    .brand-text strong{
+        font-size:17px;
+    }
+
+    .hero{
+        padding:60px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:-1px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .visual{
+        min-height:400px;
+    }
+
+    .dashboard{
+        width:95%;
+        right:2.5%;
+    }
+
+    .cloud{
+        right:0;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trust-item + .trust-item{
+        border-left:0;
+        border-top:1px solid #edf1f5;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-card > p{
+        min-height:auto;
+    }
+
+    .about-features{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .owner-box{
+        display:block;
+    }
+
+    .owner-data{
+        text-align:left;
+        margin-top:20px;
+    }
+
+    .footer-inner{
+        display:block;
+        text-align:center;
+    }
+
+    .footer-brand{
+        margin-bottom:8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+    <a href="#home" class="brand">
+        <div class="brand-mark">T</div>
+
+        <div class="brand-text">
+            <strong>Tamemi Digital</strong>
+            <small>Grow Your Business Online</small>
+        </div>
+    </a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="quote-btn" href="#contact">Get a Quote →</a>
+
+</div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+    <div>
+
+        <div class="eyebrow">
+            DIGITAL MARKETING SOLUTIONS
+        </div>
+
+        <h1>
+            Grow Your Business<br>
+            with
+            <span class="google-word">
+                <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+            </span>
+        </h1>
+
+        <p class="hero-description">
+            We help businesses increase their online visibility and reach
+            more customers through Google Ads, Google Maps, Local Services
+            Ads, cloud solutions and modern website design.
+        </p>
+
+        <div class="hero-actions">
+
+            <a class="primary-btn" href="#contact">
+                Get a Free Consultation →
+            </a>
+
+            <a class="secondary-btn" href="tel:+905366162632">
+                ☎ Contact Us
+            </a>
+
+        </div>
+
+        <div class="hero-benefits">
+            <span><b class="blue-icon">▥</b> More Traffic</span>
+            <span><b class="blue-icon">♟</b> More Customers</span>
+            <span><b class="blue-icon">↗</b> Better Visibility</span>
+        </div
